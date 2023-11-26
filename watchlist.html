@@ -1,0 +1,127 @@
+<!doctype html>
+<!-- Design by Stepan Lyubavtsev. http://mywonderful.website/ -->
+<html lang="ru">
+	<head>
+		<meta charset="utf-8" />
+		<meta content="width=device-width, initial-scale=1" name="viewport" />
+		<title>Список просмотренного</title>
+		<meta content="Список просмотренного" name="title" />
+		<meta content="" name="description" />
+		<meta content="website" property="og:type" />
+		<meta content="https://nameasy.github.io/what-to-watch/" property="og:url" />
+		<meta content="Список просмотренного" property="og:title" />
+		<meta content="" property="og:description" />
+		<meta content="" property="og:image" />
+		<meta content="summary_large_image" property="twitter:card" />
+		<meta content="https://nameasy.github.io/what-to-watch/" property="twitter:url" />
+		<meta content="Список просмотренного" property="twitter:title" />
+		<meta content="" property="twitter:description" />
+		<meta content="" property="twitter:image" />
+		<link href="/what-to-watch/index.63505821.css" rel="stylesheet" />
+		<script src="https://cdn.jsdelivr.net/npm/vue@3.3.4/dist/vue.global.prod.js"></script>
+	</head>
+
+	<body>
+		<svg style="display: none">
+			<defs>
+				<symbol fill="none" id="menu-01" viewbox="0 0 24 24">
+					<path d="M3 12H21M3 6H21M3 18H21" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+				</symbol>
+			</defs>
+		</svg>
+		<div class="page">
+			<header class="header">
+				<div class="header__logo">
+					<a class="header__logo-link" href="/index.html">
+						<div class="header__logo-text">Что посмотреть?</div>
+					</a>
+				</div>
+				<nav class="header__nav" style="margin-left: auto">
+					<ul class="header__nav-list">
+						<li class="header__nav-item">
+							<div class="dropdown header__nav-dropdown">
+								<button class="button dropdown__trigger">
+									<svg width="24" height="24" class="button__icon dropdown__trigger-icon">
+										<use href="#menu-01"></use>
+									</svg>
+								</button>
+								<ul class="dropdown__list">
+									<li class="dropdown__item">
+										<a class="dropdown__link" href="https://nameasy.github.io/symbols/">Символы</a>
+									</li>
+									<li class="dropdown__item">
+										<a class="dropdown__link" href="https://nameasy.github.io/my-bookmarks/">Мои закладки</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</nav>
+			</header>
+			<main class="main">
+				<section class="watchlist">
+					<h1 class="watchlist__title">Список просмотренного</h1>
+					<form class="filter-panel watchlist__filter">
+						<div class="filter-panel__group">
+							<label class="visually-hidden">Поиск</label>
+							<input v-model="searchQuery" class="input input--search" placeholder="Поиск" type="text" />
+						</div>
+						<div class="filter-panel__group">
+							<label class="visually-hidden">Тип</label>
+							<select v-model="typeFilter" class="select">
+								<option value="">Тип</option>
+								<option v-for="type in uniqueTypes">{{ type }}</option>
+							</select>
+						</div>
+						<div class="filter-panel__group">
+							<label class="visually-hidden">Год</label>
+							<select v-model="yearFilter" class="select">
+								<option value="">Год</option>
+								<option v-for="year in uniqueYears">{{ year }}</option>
+							</select>
+						</div>
+						<div class="filter-panel__group">
+							<label class="visually-hidden">Жанр</label>
+							<select v-model="genreFilter" class="select">
+								<option value="">Жанр</option>
+								<option v-for="genre in uniqueGenres">{{ genre }}</option>
+							</select>
+						</div>
+						<div class="filter-panel__group">
+							<label class="visually-hidden">Страна</label>
+							<select v-model="countryFilter" class="select">
+								<option value="">Страна</option>
+								<option v-for="country in uniqueCountries">{{ country }}</option>
+							</select>
+						</div>
+					</form>
+					<table class="table watchlist__table">
+						<thead>
+							<tr>
+								<th @click="sortByName()">
+									Название
+									<span v-if="sortDirection === 'asc'">↑</span>
+									<span v-if="sortDirection === 'desc'">↓</span>
+								</th>
+								<th>Тип</th>
+								<th>Год</th>
+								<th>Жанр</th>
+								<th>Страна</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr v-for="movie in filteredMovies">
+								<td>{{ movie.title }}</td>
+								<td>{{ movie.type }}</td>
+								<td>{{ movie.year }}</td>
+								<td>{{ movie.genre }}</td>
+								<td>{{ movie.country }}</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+			</main>
+		</div>
+		<script src="/what-to-watch/watchlist.7975e78f.js"></script>
+	</body>
+</html>
