@@ -82,9 +82,15 @@ const resetFilters = () => {
             class="select form__select"
             id="type"
             @change="updateType($event.target.value)"
+            :value="selectedType"
           >
             <option value="">Любой</option>
-            <option v-for="type in sortedUniqueTypes">{{ type }}</option>
+            <option
+              v-for="(type, typeIndex) in sortedUniqueTypes"
+              :key="typeIndex"
+            >
+              {{ type }}
+            </option>
           </select>
         </div>
         <div class="form__group">
@@ -93,9 +99,15 @@ const resetFilters = () => {
             class="select form__select"
             id="year"
             @change="updateYear($event.target.value)"
+            :value="selectedYear"
           >
             <option value="">Любой</option>
-            <option v-for="year in sortedUniqueYears">{{ year }}</option>
+            <option
+              v-for="(year, yearIndex) in sortedUniqueYears"
+              :key="yearIndex"
+            >
+              {{ year }}
+            </option>
           </select>
         </div>
         <div class="form__group">
@@ -104,9 +116,15 @@ const resetFilters = () => {
             class="select form__select"
             id="genre"
             @change="updateGenre($event.target.value)"
+            :value="selectedGenre"
           >
             <option value="">Любой</option>
-            <option v-for="genre in sortedUniqueGenres">{{ genre }}</option>
+            <option
+              v-for="(genre, genreIndex) in sortedUniqueGenres"
+              :key="genreIndex"
+            >
+              {{ genre }}
+            </option>
           </select>
         </div>
         <div class="form__group">
@@ -115,9 +133,13 @@ const resetFilters = () => {
             class="select form__select"
             id="country"
             @change="updateCountry($event.target.value)"
+            :value="selectedCountry"
           >
             <option value="">Любая</option>
-            <option v-for="country in sortedUniqueCountries">
+            <option
+              v-for="(country, countryIndex) in sortedUniqueCountries"
+              :key="countryIndex"
+            >
               {{ country }}
             </option>
           </select>
