@@ -1,0 +1,6 @@
+.main {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  padding: var(--space-lg) var(--space-sm);
+}

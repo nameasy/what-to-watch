@@ -1,0 +1,29 @@
+.footer {
+  z-index: 1;
+  flex-shrink: 0;
+  padding: 0 var(--space-sm) var(--space-sm);
+  transition-duration: 0.25s;
+  transition-property: opacity, transform;
+}
+
+.footer--is-hidden {
+  transform: translateY(var(--space-sm));
+  opacity: 0;
+}
+
+.footer__text {
+  font-size: var(--text-lg);
+  text-align: center;
+}
+
+@media screen and (max-width: 48rem) {
+  /*.footer {
+    display: none;
+  }*/
+  .footer--is-hidden {
+    transform: none;
+  }
+  .footer__text {
+    text-align: left;
+  }
+}

@@ -1,0 +1,29 @@
+.form__group:not(:last-child) {
+  margin-bottom: var(--space-sm);
+}
+
+.form__label {
+  display: block;
+  color: var(--color-gray);
+  font-size: var(--text-md);
+}
+
+.form__label:not(:last-child) {
+  margin-bottom: var(--space-2xs);
+}
+
+.form__button,
+.form__select {
+  width: 100%;
+  /*padding: var(--space-sm);*/
+  font-size: var(--text-lg);
+}
+
+.form__button:not(:last-child) {
+  margin-bottom: var(--space-sm);
+}
+
+.form__select {
+  padding-right: calc(var(--space-sm) + var(--space-2xs) + var(--text-lg));
+  background-size: auto, var(--text-lg);
+}
