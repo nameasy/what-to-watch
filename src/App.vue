@@ -54,7 +54,7 @@ const uniqueCountries = computed(() => {
 });
 
 const fetchData = () => {
-  fetch('./movies.json')
+  fetch('./data.json')
     .then((response) => {
       return response.json();
     })
