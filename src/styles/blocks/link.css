@@ -5,9 +5,8 @@
   text-decoration-color: var(--color-bg-darker);
   text-decoration-thickness: 1px;
   text-underline-position: auto;
-  text-underline-offset: 0.25em;
-  cursor: pointer;
-  transition-duration: 0.25s;
+  text-underline-offset: var(--underline-offset);
+  transition-duration: var(--duration);
   transition-property: color, text-decoration-color;
 }
 

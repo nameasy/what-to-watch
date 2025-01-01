@@ -9,13 +9,13 @@
 }
 
 .form__label:not(:last-child) {
-  margin-bottom: var(--space-2xs);
+  margin-bottom: var(--space-3xs);
 }
 
 .form__button,
 .form__select {
   width: 100%;
-  /*padding: var(--space-sm);*/
+  /* padding: var(--space-sm); */
   font-size: var(--text-lg);
 }
 

@@ -70,7 +70,7 @@ const resetFilters = () => {
       <header class="modal__header">
         <div class="modal__title">Фильтры</div>
         <button class="button modal__close" type="button" @click="closeFilters">
-          <svg class="button__icon modal__close-icon" height="24" width="14">
+          <svg class="button__icon modal__close-icon" width="14" height="24">
             <use href="#x"></use>
           </svg>
         </button>

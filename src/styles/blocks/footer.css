@@ -1,8 +1,7 @@
 .footer {
   z-index: 1;
   flex-shrink: 0;
-  padding: 0 var(--space-sm) var(--space-sm);
-  transition-duration: 0.25s;
+  transition-duration: var(--duration);
   transition-property: opacity, transform;
 }
 
@@ -17,9 +16,9 @@
 }
 
 @media screen and (max-width: 48rem) {
-  /*.footer {
+  /* .footer {
     display: none;
-  }*/
+  } */
   .footer--is-hidden {
     transform: none;
   }

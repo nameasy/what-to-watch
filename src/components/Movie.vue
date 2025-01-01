@@ -56,8 +56,8 @@ const removeClass = (className) => {
         <svg
           class="button__icon movie__random-icon"
           aria-hidden="true"
-          height="24"
           width="21"
+          height="24"
         >
           <use href="#refresh-ccw"></use>
         </svg>
@@ -80,8 +80,8 @@ const removeClass = (className) => {
         <svg
           class="button__icon movie__save-icon"
           aria-hidden="true"
-          height="24"
           width="22"
+          height="24"
         >
           <use href="#heart"></use>
         </svg>

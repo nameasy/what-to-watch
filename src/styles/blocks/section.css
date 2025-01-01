@@ -11,12 +11,12 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  max-width: var(--max-width-xl);
+  max-width: 90rem;
   margin-right: auto;
   margin-left: auto;
   inset: 0;
   padding: 0 var(--space-sm);
-  transition-duration: 0.25s;
+  transition-duration: var(--duration);
   transition-property: opacity, transform;
 }
 
@@ -33,7 +33,7 @@
   right: 0;
   bottom: 0;
   width: 100%;
-  max-width: var(--max-width-xs);
+  max-width: 32rem;
   overflow-x: hidden;
   overflow-y: auto;
   transform: translateX(100%);
@@ -44,7 +44,7 @@
     0 8px 15px -1px hsla(228, 4%, 47%, 0.05),
     0 28px 40px -1px hsla(228, 4%, 47%, 0.1);
   opacity: 0;
-  transition-duration: 0.25s;
+  transition-duration: var(--duration);
   transition-property: all;
 }
 

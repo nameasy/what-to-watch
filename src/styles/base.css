@@ -2,20 +2,21 @@
   outline: none;
 }
 
-body,
-html {
+html,
+body {
   overflow: hidden;
-  /*scrollbar-gutter: stable;*/
+  /* scrollbar-gutter: stable; */
 }
 
 body {
   background-color: var(--color-bg);
   color: var(--color-gray-dark);
   font-size: var(--text-base);
-  line-height: 1.2;
+  line-height: 1.25;
   font-family: 'Noto Sans', sans-serif;
-  text-transform: lowercase;
-  transition-duration: 0.25s;
+  letter-spacing: -0.025em;
+  /* text-transform: lowercase; */
+  transition-duration: var(--duration);
   transition-property: background-color;
 }
 
@@ -24,8 +25,8 @@ a {
 }
 
 @media screen and (max-width: 48rem) {
-  body,
-  html {
+  html,
+  body {
     overflow: visible;
   }
 }

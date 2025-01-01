@@ -12,7 +12,7 @@
   overflow-y: auto;
   transform: scale(0.3);
   opacity: 0;
-  transition-duration: 0.25s;
+  transition-duration: var(--duration);
   transition-property: all;
 }
 
@@ -24,7 +24,7 @@
 
 .modal__inner {
   width: 100%;
-  max-width: var(--max-width-2xs);
+  max-width: 26rem;
   margin: auto;
   border-radius: calc(var(--space-sm) + 0.5rem);
   background-color: var(--color-bg);
@@ -37,7 +37,7 @@
 
 .modal__header {
   display: flex;
-  column-gap: var(--space-md);
+  column-gap: var(--space-sm);
   align-items: center;
   justify-content: space-between;
   padding: var(--space-sm);
@@ -47,8 +47,8 @@
 .modal__title {
   color: var(--color-gray-darker);
   font-weight: 500;
-  font-size: var(--text-xl);
-  line-height: 1.1;
+  font-size: var(--text-lg);
+  line-height: 1;
 }
 
 .modal__close {

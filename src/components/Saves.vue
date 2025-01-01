@@ -20,8 +20,8 @@ const closeSaves = () => {
         <svg
           class="button__icon saves__close-icon"
           aria-hidden="true"
-          height="24"
           width="14"
+          height="24"
         >
           <use href="#x"></use>
         </svg>
